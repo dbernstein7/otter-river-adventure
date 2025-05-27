@@ -718,11 +718,84 @@
             width: 100%;
             display: block;
         }
+        /* Add mobile controls styles */
+        .mobile-controls {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .mobile-controls button {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-controls button:active {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .mobile-controls .up-down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mobile-controls .left-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-version-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-version-btn {
+                display: block;
+            }
+        }
     </style>
-  <script type="module" crossorigin src="/assets/index-DMaetRop.js"></script>
+  <script type="module" crossorigin src="/assets/index-C7CKgsad.js"></script>
 </head>
 <body>
     <div id="game-container">
+        <!-- Mobile Controls -->
+        <div class="mobile-controls">
+            <div class="up-down">
+                <button id="up-btn">↑</button>
+                <button id="down-btn">↓</button>
+            </div>
+            <div class="left-right">
+                <button id="left-btn">←</button>
+                <button id="right-btn">→</button>
+            </div>
+        </div>
+
+        <!-- Mobile Version Button -->
+        <button class="mobile-version-btn" id="mobile-version-btn">Mobile Version</button>
+
         <!-- Game Canvas will be inserted here -->
         
         <!-- Game Info -->
