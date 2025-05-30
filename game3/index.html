@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otter Royale 🦦</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Otter Royale 🦦</h1>
+        <p>A battle royale game featuring adorable otters!</p>
+        <button id="startButton">Start Game</button>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui">
+        <div id="healthBar"><div></div></div>
+        <div id="shieldBar"><div></div></div>
+        <div id="playerCount">Players Alive: 100</div>
+        <div id="stormTimer">Next Storm Shrink: 60s</div>
+        <div id="gameState">Waiting for players...</div>
+    </div>
+    <div id="controls">
+        <p>WASD - Move</p>
+        <p>Space - Jump</p>
+        <p>Left Click - Shoot</p>
+        <p>Right Click - Build</p>
+        <p>Q,E,R,F - Building pieces</p>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html> 
